@@ -28,7 +28,7 @@ with open(save_path,'a') as f:
     f.close()  
 
 '''
-path="./data/images_largescale/imagenet_v2"
+path="/media/SATA_2/images_largescale/imagenet_v2"
 save_path="./data/benchmark_imglist/imagenet/test_imagenetv2.txt"
 prefix="imagenet_v2/"
 with open(save_path,'a') as f:

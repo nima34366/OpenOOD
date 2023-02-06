@@ -14,21 +14,21 @@ ood_dataset:
   num_machines: '@{num_machines}'
   split_names: [val, nearood, farood, csid]
   val:
-    data_dir: ./data/images_largescale/
+    data_dir: /media/SATA_2/images_largescale/
     imglist_pth: ./data/benchmark_imglist/imagenet/val_openimage_o.txt
   nearood:
     datasets: [species, inaturalist, openimageo, imageneto]
     inaturalist:
-      data_dir: ./data/images_largescale/
+      data_dir: /media/SATA_2/images_largescale/
       imglist_pth: ./data/benchmark_imglist/imagenet/test_inaturalist.txt
     openimageo:
-      data_dir: ./data/images_largescale/
+      data_dir: /media/SATA_2/images_largescale/
       imglist_pth: ./data/benchmark_imglist/imagenet/test_openimage_o.txt
     imageneto:
-      data_dir: ./data/images_largescale/
+      data_dir: /media/SATA_2/images_largescale/
       imglist_pth: ./data/benchmark_imglist/imagenet/test_imagenet_o.txt
     species:
-      data_dir: ./data/images_largescale/
+      data_dir: /media/SATA_2/images_largescale/
       imglist_pth: ./data/benchmark_imglist/imagenet/test_species.txt
   farood:
     datasets: [texture]
@@ -38,5 +38,5 @@ ood_dataset:
   csid:
     datasets: [imagenetv2]
     imagenetv2:
-      data_dir: ./data/images_largescale/
+      data_dir: /media/SATA_2/images_largescale/
       imglist_pth: ./data/benchmark_imglist/imagenet/test_imagenetv2.txt
