@@ -20,5 +20,5 @@ configs/preprocessors/base_preprocessor.yml \
 configs/postprocessors/godin.yml \
 --network.backbone.name resnet18_32x32 \
 --num_workers 8 \
---network.checkpoint 'results/cifar10_godin_net_godin_e100_lr0.1_default/best.ckpt' \
+--network.checkpoint 'results/cifar10_godin_net_base_e100_lr0.1_default/best.ckpt' \
 --mark epoch_100

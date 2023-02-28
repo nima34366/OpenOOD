@@ -8,6 +8,9 @@ data/
 results/
 checkpoints/
 ipynb_checkpoints/
+scripts/classifier_2/images
+scripts/classifier_2/data
+lightning_logs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

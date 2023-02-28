@@ -18,6 +18,8 @@ configs/pipelines/train/baseline.yml \
 configs/preprocessors/base_preprocessor.yml \
 configs/postprocessors/godin.yml \
 --network.backbone.name resnet18_32x32 \
+--network.backbone.pretrained True \
+--network.backbone.checkpoint 'results/checkpoints/cifar10_res18_acc94.30.ckpt'
 --num_workers 8 \
 --trainer.name godin \
 --optimizer.num_epochs 100 \

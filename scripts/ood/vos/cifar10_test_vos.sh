@@ -13,6 +13,8 @@ configs/pipelines/test/test_ood.yml \
 configs/preprocessors/base_preprocessor.yml \
 configs/postprocessors/ebo.yml \
 --num_workers 8 \
---network.pretrained True \
---network.checkpoint 'results/cifar10_resnet18_32x32_vos/best_epoch92_acc0.9550.ckpt' \
+--network.pretrained False \
+--network.backbone.name resnet18_32x32 \
+--network.backbone.pretrained True \
+--network.backbone.checkpoint 'results/checkpoints/cifar10_res18_acc94.30.ckpt' \
 --mark vos
