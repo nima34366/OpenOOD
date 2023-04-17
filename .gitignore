@@ -1,9 +1,11 @@
 # ignore some temp/test files
 _test_*
 *-backup*
+*.png
 
 # ignore data and output directory
 data
+openoodenv
 data/
 results/
 checkpoints/

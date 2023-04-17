@@ -12,7 +12,7 @@ ood_dataset:
   num_workers: '@{num_workers}'
   num_gpus: '@{num_gpus}'
   num_machines: '@{num_machines}'
-  split_names: [val, nearood, farood]
+  split_names: [val, nearood, farood, adv]
   val:
     data_dir: /media/SATA_2/images_largescale/
     imglist_pth: ./data/benchmark_imglist/imagenet/val_openimage_o.txt
@@ -38,3 +38,11 @@ ood_dataset:
     mnist:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/imagenet/test_mnist.txt
+  adv:
+    datasets: [fgsm, pgd]
+    fgsm:
+      data_dir: ./data/images_classic/cifar10/fgsm/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    pgd:
+      data_dir: ./data/images_classic/cifar10/pgd/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt

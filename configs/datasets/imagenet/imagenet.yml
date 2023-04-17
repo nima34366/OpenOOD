@@ -15,19 +15,19 @@ dataset:
 
   train:
     dataset_class: ImglistDataset
-    data_dir: /media/SATA_2/images_largescale/
+    data_dir: ./data/images_classic/
     imglist_pth: ./data/benchmark_imglist/imagenet/train_imagenet.txt
-    batch_size: 32
+    batch_size: 16
     shuffle: True
   val:
     dataset_class: ImglistDataset
-    data_dir: /media/SATA_2/images_largescale/
+    data_dir: ./data/images_classic/
     imglist_pth: ./data/benchmark_imglist/imagenet/val_imagenet.txt
-    batch_size: 32
+    batch_size: 16
     shuffle: False
   test:
     dataset_class: ImglistDataset
-    data_dir: /media/SATA_2/images_largescale/
+    data_dir: ./data/images_classic/
     imglist_pth: ./data/benchmark_imglist/imagenet/test_imagenet.txt
-    batch_size: 32
+    batch_size: 16
     shuffle: False

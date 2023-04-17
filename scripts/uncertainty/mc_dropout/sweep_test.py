@@ -24,9 +24,9 @@ config = [
 
 for [dataset, ood_data, network, pth] in config:
     command = (f"PYTHONPATH='.':$PYTHONPATH \
-    srun -p dsta --mpi=pmi2 --gres=gpu:1 -n1 \
-    --cpus-per-task=1 --ntasks-per-node=1 \
-    --kill-on-bad-exit=1 --job-name=openood \
+    #srun -p dsta --mpi=pmi2 --gres=gpu:1 -n1 \
+    #--cpus-per-task=1 --ntasks-per-node=1 \
+    #--kill-on-bad-exit=1 --job-name=openood \
     python main.py \
     --config configs/datasets/{dataset} \
     configs/datasets/{ood_data} \

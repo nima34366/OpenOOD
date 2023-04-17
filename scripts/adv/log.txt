@@ -1,0 +1,19 @@
+svhn.npz 26032
+cifar10.npz 9000
+pgd.npz 9000
+mnist.npz 70000
+texture.npz 5640
+cifar100.npz 9000
+places365.npz 35195
+tin.npz 8793
+Number of OOD detecting methods: 13
+Total number of samples = 172660
+ADVERSERIAL SAMPLING
+cifar10 8973
+cifar100 4474
+mnist 2250
+pgd 9000
+places365 2221
+svhn 2228
+texture 2231
+tin 4623

@@ -1,0 +1,3 @@
+all together acc: 0.8825
+################# NEAR FAR OOD ##################
+all together acc: 0.7185185185185186

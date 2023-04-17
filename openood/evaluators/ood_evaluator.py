@@ -57,6 +57,11 @@ class OODEvaluator(BaseEvaluator):
                        ood_data_loaders,
                        postprocessor,
                        ood_split='farood')
+        # adv
+        self._eval_ood(net, [id_pred, id_conf, id_gt],
+                       ood_data_loaders,
+                       postprocessor,
+                       ood_split='adv')
 
     def _eval_ood(self,
                   net: nn.Module,

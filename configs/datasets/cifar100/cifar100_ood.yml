@@ -10,7 +10,7 @@ ood_dataset:
   batch_size: 128
   shuffle: False
 
-  split_names: [val, nearood, farood]
+  split_names: [val, nearood, farood,adv]
   val:
     data_dir: ./data/images_classic/
     imglist_pth: ./data/benchmark_imglist/cifar100/val_cifar10.txt
@@ -36,3 +36,29 @@ ood_dataset:
     places365:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/cifar100/test_places365.txt
+  adv:
+    datasets: [fgsm_0.01, fgsm_0.03, fgsm_0.09, fgsm_0.27, pgd_0.01, pgd_0.03, pgd_0.09, pgd_0.27]
+    fgsm_0.01:
+      data_dir: ./data/images_classic/cifar100/fgsm_0.01/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    fgsm_0.03:
+      data_dir: ./data/images_classic/cifar100/fgsm_0.03/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    fgsm_0.09:
+      data_dir: ./data/images_classic/cifar100/fgsm_0.09/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    fgsm_0.27:
+      data_dir: ./data/images_classic/cifar100/fgsm_0.27/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    pgd_0.01:
+      data_dir: ./data/images_classic/cifar100/pgd_0.01/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    pgd_0.03:
+      data_dir: ./data/images_classic/cifar100/pgd_0.03/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    pgd_0.09:
+      data_dir: ./data/images_classic/cifar100/pgd_0.09/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt
+    pgd_0.27:
+      data_dir: ./data/images_classic/cifar100/pgd_0.27/
+      imglist_pth: ./data/benchmark_imglist/cifar100/adv.txt

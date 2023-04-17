@@ -50,9 +50,9 @@ if __name__ == '__main__':
     # different command with different job schedulers
     if args.launcher == 'slurm':
         command_prefix = ("PYTHONPATH='.':$PYTHONPATH \
-                          srun -p dsta --mpi=pmi2 --gres=gpu:1 -n1 \
-                          --cpus-per-task=1 --ntasks-per-node=1 \
-                          --kill-on-bad-exit=1 -w SG-IDC1-10-51-2-79 ")
+                          #srun -p dsta --mpi=pmi2 --gres=gpu:1 -n1 \
+                          #--cpus-per-task=1 --ntasks-per-node=1 \
+                          #--kill-on-bad-exit=1 -w SG-IDC1-10-51-2-79 ")
     else:
         command_prefix = "PYTHONPATH='.':$PYTHONPATH "
 
@@ -116,7 +116,7 @@ if __name__ == '__main__':
     save_line_dict = {'ood': -8, 'osr': -1, 'acc': -1}
     # TODO: extend according to config
     args.benchmarks.extend([
-        'tin', 'nearood', 'mnist', 'svhn', 'texture', 'place365', 'places365',
+        'tin', 'nearood', 'mnist', 'svhn', 'texture', 'places365', 'places365',
         'farood'
     ])
 

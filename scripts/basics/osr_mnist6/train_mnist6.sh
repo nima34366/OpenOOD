@@ -8,9 +8,9 @@ jobname=openood
 
 if [ $USER == "jkyang" ]; then
     PYTHONPATH='.':$PYTHONPATH \
-    srun -p dsta --mpi=pmi2 --gres=gpu:${GPU} -n1 \
-    --cpus-per-task=${CPU} --ntasks-per-node=${GPU} \
-    --kill-on-bad-exit=1 --job-name=${jobname} \
+    #srun -p dsta --mpi=pmi2 --gres=gpu:${GPU} -n1 \
+    #--cpus-per-task=${CPU} --ntasks-per-node=${GPU} \
+    #--kill-on-bad-exit=1 --job-name=${jobname} \
     python main.py \
     --config configs/datasets/osr_mnist6/mnist6_seed2.yml \
     configs/networks/lenet.yml \

@@ -10,7 +10,7 @@ ood_dataset:
   batch_size: 128
   shuffle: False
 
-  split_names: [val, nearood, farood]
+  split_names: [val, nearood, farood, adv]
   val:
     data_dir: ./data/images_classic/
     imglist_pth: ./data/benchmark_imglist/mnist/val_notmnist.txt
@@ -36,3 +36,29 @@ ood_dataset:
     places365:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/mnist/test_places365.txt
+  adv:
+    datasets: [fgsm_0.1, fgsm_0.2, fgsm_0.3, fgsm_0.4, pgd_0.1, pgd_0.2, pgd_0.3, pgd_0.4]
+    fgsm_0.1:
+      data_dir: ./data/images_classic/mnist/fgsm_0.1/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    fgsm_0.2:
+      data_dir: ./data/images_classic/mnist/fgsm_0.2/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    fgsm_0.3:
+      data_dir: ./data/images_classic/mnist/fgsm_0.3/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    fgsm_0.4:
+      data_dir: ./data/images_classic/mnist/fgsm_0.4/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    pgd_0.1:
+      data_dir: ./data/images_classic/mnist/pgd_0.1/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    pgd_0.2:
+      data_dir: ./data/images_classic/mnist/pgd_0.2/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    pgd_0.3:
+      data_dir: ./data/images_classic/mnist/pgd_0.3/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt
+    pgd_0.4:
+      data_dir: ./data/images_classic/mnist/pgd_0.4/
+      imglist_pth: ./data/benchmark_imglist/mnist/adv.txt

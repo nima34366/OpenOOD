@@ -10,7 +10,7 @@ ood_dataset:
   batch_size: 128
   shuffle: False
 
-  split_names: [val, nearood, farood]
+  split_names: [val, nearood, farood, adv]
   val:
     data_dir: ./data/images_classic/
     imglist_pth: ./data/benchmark_imglist/cifar10/val_cifar100.txt
@@ -23,7 +23,7 @@ ood_dataset:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/cifar10/test_tin.txt
   farood:
-    datasets: [mnist, svhn, texture, place365]
+    datasets: [mnist, svhn, texture, places365]
     mnist:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/cifar10/test_mnist.txt
@@ -33,6 +33,32 @@ ood_dataset:
     texture:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/cifar10/test_texture.txt
-    place365:
+    places365:
       data_dir: ./data/images_classic/
       imglist_pth: ./data/benchmark_imglist/cifar10/test_places365.txt
+  adv:
+    datasets: [fgsm_0.01, fgsm_0.03, fgsm_0.09, fgsm_0.27, pgd_0.01, pgd_0.03, pgd_0.09, pgd_0.27]
+    fgsm_0.01:
+      data_dir: ./data/images_classic/cifar10/fgsm_0.01/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    fgsm_0.03:
+      data_dir: ./data/images_classic/cifar10/fgsm_0.03/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    fgsm_0.09:
+      data_dir: ./data/images_classic/cifar10/fgsm_0.09/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    fgsm_0.27:
+      data_dir: ./data/images_classic/cifar10/fgsm_0.27/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    pgd_0.01:
+      data_dir: ./data/images_classic/cifar10/pgd_0.01/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    pgd_0.03:
+      data_dir: ./data/images_classic/cifar10/pgd_0.03/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    pgd_0.09:
+      data_dir: ./data/images_classic/cifar10/pgd_0.09/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
+    pgd_0.27:
+      data_dir: ./data/images_classic/cifar10/pgd_0.27/
+      imglist_pth: ./data/benchmark_imglist/cifar10/adv.txt
